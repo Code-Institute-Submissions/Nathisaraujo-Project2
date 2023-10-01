@@ -1,0 +1,30 @@
+@import url('https://fonts.googleapis.com/css2?family=Pixelify+Sans&family=Young+Serif&display=swap');
+
+.heading {
+    font-family: 'Pixelify Sans', cursive;
+}
+
+.score-box {
+    font-family: 'Young Serif', serif;
+}
+
+body {
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    text-align: center;
+}
+
+.quiz-box {
+    background-color: rgba(44, 29, 58, 0.603);
+    display: flex;
+    flex-direction: column;
+    width: 80vw;
+    height: 60vh;
+    align-items: center;
+
+
+}
+
+button {
+    width: 40vw;
+
+}
