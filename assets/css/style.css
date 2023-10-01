@@ -18,13 +18,22 @@ body {
     display: flex;
     flex-direction: column;
     width: 80vw;
-    height: 60vh;
+    height: 0 auto;
     align-items: center;
+    margin: 0 auto;
+    padding-top: 100px;
+    border-radius: 5px;
 
 
 }
 
 button {
     width: 40vw;
+    height: 3rem;
+    margin-bottom: 10px;
 
+}
+
+.score {
+    font-size: 0.85rem;
 }
