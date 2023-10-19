@@ -87,6 +87,9 @@ const finish = document.getElementsByClassName("finish");
 const result = document.getElementsByClassName("result");
 const score = document.getElementsByClassName("score");
 
-
-
 let correctAnswers = 0;
+
+function gameStart {
+    firstQuestionIndex = 0;
+    score = 0;
+}
