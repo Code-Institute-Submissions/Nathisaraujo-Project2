@@ -4,35 +4,32 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+    <title>Classic Game's Quiz</title>
     <link rel="stylesheet" href="assets/css/style.css" />
   </head>
 
   <body>
     <h1 class="heading">Classic Game's Quiz</h1>
-    <div class="start">
-      <button class="start-button">READY...GO!</button>
+
+    <div id="start">
+      <button class="start-button" onclick="gameStart()">Ready...GO!</button>
     </div>
 
     <div class="quiz-box">
-      <div class="question-area"></div>
+      <div id="question"></div>
       <button class="answer"></button>
       <button class="answer"></button>
       <button class="answer"></button>
-      <div class="finish">
-        <div class="result">
-          <p class="game-over">GAME OVER!</p>
-          <p class="score">
-            Congrats, you've got<span id="score"> 0</span> right answers!
-          </p>
-        </div>
-        <button>Play Again</button>
-      </div>
+      <div id="next" onclick="next()"><button>Next</button></div>
     </div>
 
+    <div id="finish" onclick="finishGame()">
+      <div class="result"></div>
+      <button class="play-again" onclick="playAgain()">Play Again</button>
+    </div>
+    <footer>
+      <p>Website created for educational purposes</p>
+    </footer>
     <script src="assets/js/script.js"></script>
   </body>
-  <footer>
-    <p>Website created for educational purposes</p>
-  </footer>
 </html>

@@ -4,10 +4,6 @@
     font-family: 'Pixelify Sans', cursive;
 }
 
-.score-box {
-    font-family: 'Young Serif', serif;
-}
-
 body {
     font-family: Georgia, 'Times New Roman', Times, serif;
     text-align: center;
@@ -23,17 +19,31 @@ body {
     margin: 0 auto;
     padding-top: 100px;
     border-radius: 10px;
-
-
 }
 
 button {
     width: 30vw;
     height: 3rem;
     margin-bottom: 10px;
-
 }
 
-.score {
-    font-size: 0.85rem;
+#start {
+    display: flex;
+    flex-direction: column;
+    width: 60vw;
+    height: 0 auto;
+    align-items: center;
+    margin: 0 auto;
+    padding-top: 100px;
+    border-radius: 10px;
 }
+
+.start-button {
+    color: white;
+    background-color: rgba(44, 29, 58, 0.938);
+    font-size: 30px;
+    width: 60vw;
+    border-radius: 100px;
+}
+
+footer {}

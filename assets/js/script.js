@@ -1,4 +1,3 @@
-
 const gameQuestions = [
     {
         question: "What was Mario`s first name?",
@@ -82,22 +81,100 @@ const gameQuestions = [
     },
 ];
 
-const question = document.getElementsByClassName("question-area");
-const answer = document.getElementsByClassName("answer");
-const finish = document.getElementsByClassName("finish");
-const result = document.getElementsByClassName("result");
-const score = document.getElementsByClassName("score");
-const start = document.getElementsByClassName("start");
+const question = document.getElementById("question");
+const finish = document.getElementById("finish");
+const result = document.querySelector(".result");
+const start = document.getElementById("start");
+const quiz = document.querySelector(".quiz-box");
+const answer = document.querySelectorAll(".answer");
 
-let correctAnswers = 0;
 
-//I was a little bit lost on how to initiate it so I ...
-function gameStart {
-    start.innerHTML = "";
-}
+let firstQuestionIndex = 0;
+let score = 0;
 
-function loadQuestion {
+
+
+
+function gameStart() {
+    start.style.display = "block";
+    quiz.style.display = "none";
+    finish.style.display = "none";
     firstQuestionIndex = 0;
     score = 0;
-    question.innerHTML = "item.question";
+    loadQuestion();
 }
+
+function loadQuestion() {
+    quiz.style.display = "block";
+    question.innerHTML = gameQuestions[firstQuestionIndex].question;
+
+    if (firstQuestionIndex < gameQuestions.length) {
+        gameQuestions[firstQuestionIndex].answer.forEach((answerOption, index) => {
+            answer[index].textContent = answerOption.option;
+            answer[index].addEventListener("click", () => {
+                if (answerOption.correct) {
+                    score++;
+                }
+            });
+        });
+    } else {
+        finishGame();
+    }
+}
+
+answer.forEach((answerButton, index) => {
+
+    answerButton.addEventListener("click", () => {
+        if (gameQuestions[firstQuestionIndex].answer[index].correct) {
+            score++;
+        }
+    });
+});
+
+next.addEventListener("click", () => {
+    if (firstQuestionIndex < gameQuestions.length - 1) {
+        firstQuestionIndex++;
+        loadQuestion();
+    } else {
+        finishGame();
+    }
+});
+
+
+function finishGame() {
+    start.style.display = "none";
+    quiz.style.display = "none";
+    finish.style.display = "block";
+    result.textContent = "GAME OVER\nCongrats!\nYou've got " + score + " questions right!";
+}
+
+function playAgain() {
+    const playAgainButton = document.querySelector(".play-again");
+    playAgainButton.addEventListener("click", () => {
+        firstQuestionIndex = 0;
+        score = 0;
+        loadQuestion();
+
+    });
+}
+
+
+function finishGame() {
+    start.style.display = "none";
+    quiz.style.display = "none";
+    finish.style.display = "block";
+    result.textContent = "GAME OVER\nCongrats!\nYou've got " + score + " questions right!";
+}
+
+function playAgain() {
+    const playAgainButton = document.querySelector(".play-again");
+    playAgainButton.addEventListener("click", () => {
+        firstQuestionIndex = 0;
+        score = 0;
+        loadQuestion();
+
+    });
+}
+
+gameStart();
+loadQuestion();
