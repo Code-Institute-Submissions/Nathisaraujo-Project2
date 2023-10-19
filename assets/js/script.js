@@ -1,3 +1,4 @@
+
 const gameQuestions = [
     {
         question: "What was Mario`s first name?",
@@ -86,10 +87,17 @@ const answer = document.getElementsByClassName("answer");
 const finish = document.getElementsByClassName("finish");
 const result = document.getElementsByClassName("result");
 const score = document.getElementsByClassName("score");
+const start = document.getElementsByClassName("start");
 
 let correctAnswers = 0;
 
+//I was a little bit lost on how to initiate it so I ...
 function gameStart {
+    start.innerHTML = "";
+}
+
+function loadQuestion {
     firstQuestionIndex = 0;
     score = 0;
+    question.innerHTML = "item.question";
 }
