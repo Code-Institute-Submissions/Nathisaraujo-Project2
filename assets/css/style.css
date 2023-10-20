@@ -84,13 +84,33 @@ body {
     font-size: 30px;
 }
 
+#finish {
+    background-color: rgba(209, 183, 221, 0.555);
+    width: 50vw;
+    height: 0 auto;
+    align-items: center;
+    margin: 20px auto;
+    padding: 20px 20px;
+    border-radius: 10px;
+    font-size: 30px;
+}
+
+.play-again {
+    color: white;
+    background-color: rgb(101, 48, 133);
+    font-size: 30px;
+    width: 20vw;
+    height: 70px;
+    border-radius: 100px;
+}
+
 footer {
     color: white;
 }
 
 @media only screen and (max-width: 768px) {
     .heading {
-        font-size: 2rem;
+        font-size: 3rem;
     }
 
     .quiz-box {
@@ -110,6 +130,7 @@ footer {
     .instructions {
         width: 40vw;
         font-size: 10px;
+        font-size: 0.8rem;
     }
 
     footer {

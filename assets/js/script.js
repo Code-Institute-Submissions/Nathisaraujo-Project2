@@ -144,7 +144,8 @@ function finishGame() {
     start.style.display = "none";
     quiz.style.display = "none";
     finish.style.display = "block";
-    result.textContent = "GAME OVER\nCongrats!\nYou've got " + score + " questions right!";
+    result.textContent = "GAME OVER!" < br >
+        "Congrats!" < br > "You've got " + score + " questions right!";
     playAgainButton.addEventListener("click", () => {
         gameStart();
 
