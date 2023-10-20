@@ -87,7 +87,7 @@ const result = document.querySelector(".result");
 const start = document.getElementById("start");
 const quiz = document.querySelector(".quiz-box");
 const answer = document.querySelectorAll(".answer");
-const playAgainButton = document.getElementsByClassName("play-again");
+const playAgainButton = document.getElementById("play-again");
 
 let firstQuestionIndex = 0;
 let score = 0;
@@ -107,18 +107,11 @@ function gameStart() {
 
 function loadQuestion() {
     question.innerHTML = gameQuestions[firstQuestionIndex].question;
-
+    console.log("firstQuestionIndex", firstQuestionIndex);
     if (firstQuestionIndex < gameQuestions.length) {
         gameQuestions[firstQuestionIndex].answer.forEach((answerOption, index) => {
             answer[index].textContent = answerOption.option;
-            answer[index].addEventListener("click", () => {
-                if (answerOption.correct) {
-                    score++;
-                }
-            });
         });
-    } else {
-        finishGame();
     }
 }
 
@@ -128,27 +121,26 @@ answer.forEach((answerButton, index) => {
         if (gameQuestions[firstQuestionIndex].answer[index].correct) {
             score++;
         }
+        if (firstQuestionIndex < gameQuestions.length - 1) {
+            firstQuestionIndex++;
+            loadQuestion();
+        } else {
+            finishGame();
+        }
     });
 });
 
-next.addEventListener("click", () => {
-    if (firstQuestionIndex < gameQuestions.length - 1) {
-        firstQuestionIndex++;
-        loadQuestion();
-    } else {
-        finishGame();
-    }
-});
 
 function finishGame() {
+    console.log("finishgame");
     start.style.display = "none";
     quiz.style.display = "none";
     finish.style.display = "block";
-    result.textContent = "GAME OVER!" < br >
-        "Congrats!" < br > "You've got " + score + " questions right!";
+    result.textContent = "GAME OVER!<\n>Congrats!\nYou've got " + score + " questions right!";
     playAgainButton.addEventListener("click", () => {
         gameStart();
 
     });
 }
+
 
