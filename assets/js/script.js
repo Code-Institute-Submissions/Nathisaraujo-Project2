@@ -87,17 +87,18 @@ const result = document.querySelector(".result");
 const start = document.getElementById("start");
 const quiz = document.querySelector(".quiz-box");
 const answer = document.querySelectorAll(".answer");
-
+const playAgainButton = document.getElementsByClassName("play-again");
 
 let firstQuestionIndex = 0;
 let score = 0;
 
-
-
+start.style.display = "block";
+quiz.style.display = "none";
+finish.style.display = "none";
 
 function gameStart() {
-    start.style.display = "block";
-    quiz.style.display = "none";
+    start.style.display = "none";
+    quiz.style.display = "block";
     finish.style.display = "none";
     firstQuestionIndex = 0;
     score = 0;
@@ -105,7 +106,6 @@ function gameStart() {
 }
 
 function loadQuestion() {
-    quiz.style.display = "block";
     question.innerHTML = gameQuestions[firstQuestionIndex].question;
 
     if (firstQuestionIndex < gameQuestions.length) {
@@ -140,41 +140,14 @@ next.addEventListener("click", () => {
     }
 });
 
-
 function finishGame() {
     start.style.display = "none";
     quiz.style.display = "none";
     finish.style.display = "block";
     result.textContent = "GAME OVER\nCongrats!\nYou've got " + score + " questions right!";
-}
-
-function playAgain() {
-    const playAgainButton = document.querySelector(".play-again");
     playAgainButton.addEventListener("click", () => {
-        firstQuestionIndex = 0;
-        score = 0;
-        loadQuestion();
+        gameStart();
 
     });
 }
 
-
-function finishGame() {
-    start.style.display = "none";
-    quiz.style.display = "none";
-    finish.style.display = "block";
-    result.textContent = "GAME OVER\nCongrats!\nYou've got " + score + " questions right!";
-}
-
-function playAgain() {
-    const playAgainButton = document.querySelector(".play-again");
-    playAgainButton.addEventListener("click", () => {
-        firstQuestionIndex = 0;
-        score = 0;
-        loadQuestion();
-
-    });
-}
-
-gameStart();
-loadQuestion();
