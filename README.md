@@ -29,18 +29,20 @@ When the visitor is ready, he can click on “Ready… GO!” button which will 
 - The colors match between each other and are readable on every question.
 
 ![Q&A Screenshot](/readme-images/4.png)
+![Q&A Screenshot](/readme-images/5.png)
+![Q&A Screenshot](/readme-images/6.png)
 
 ### The Game Results
 - The results page will show how many questions the user got right. 
 - In the “home page” the user is informed that there are 10 questions and the quiz also asks how many the user can guess right.
 - I decided to write “Game Over” so the visitor can relate to an actual game.
 
-![results Screenshot](/readme-images/5.png)
+![results Screenshot](/readme-images/7.png)
 
 ### The footer
 - The footer is simple and just inform the visitor that the website was created for educational purposes.
 
-![results Screenshot](/readme-images/6.png)
+![results Screenshot](/readme-images/8.png)
 
 ## TESTING
 
@@ -58,19 +60,19 @@ When the visitor is ready, he can click on “Ready… GO!” button which will 
 ### Validator Testing
  - **HTML:** Passed through the W3C validator with some errors.
    
-![html validator Screenshot](/readme-images/7.png)
+![html validator Screenshot](/readme-images/9.png)
 
 - **CSS:** No errors when validated using the official (Jigsaw) validator.
 
-![css validator Screenshot](/readme-images/8.png)
+![css validator Screenshot](/readme-images/10.png)
 
 - **JS:** Passed through the JS validator with some problems.
 
-![js validator Screenshot](/readme-images/9.png)
+![js validator Screenshot](/readme-images/11.png)
 
 - **LIGHTHOUSE:** Ensured readability and accessibility of chosen colors and fonts using Lighthouse in devtools.
    
-![lighthouse validator Screenshot](/readme-images/10.png)
+![lighthouse validator Screenshot](/readme-images/12.png)
 
 ## Unfixed bugs
 
