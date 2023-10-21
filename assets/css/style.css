@@ -1,17 +1,21 @@
-@import url('https://fonts.googleapis.com/css2?family=Pixelify+Sans&family=Young+Serif&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Pixelify+Sans&family=Playpen+Sans&display=swap');
 
 .heading {
-    font-family: 'Pixelify Sans', cursive;
+    font-family: 'Pixelify Sans', cursive, Georgia;
     color: white;
     font-size: 5rem;
-    margin-bottom: 100px;
+    margin-bottom: 60px;
 }
 
 body {
-    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-family: 'Playpen Sans', cursive, Georgia;
     text-align: center;
     background-image: url("../images/image1.jpg");
     background-size: cover;
+}
+
+.answer {
+    font-family: 'Playpen Sans', cursive, Georgia;
 }
 
 .quiz-box {
@@ -19,9 +23,8 @@ body {
     display: flex;
     flex-direction: column;
     width: 50vw;
-    height: 0 auto;
+    height: auto;
     align-items: center;
-    margin: 0 auto;
     padding: 20px 20px;
     border-radius: 10px;
     margin: 0 auto 95px auto;
@@ -75,13 +78,13 @@ body {
 
 .instructions {
     background-color: rgba(209, 183, 221, 0.555);
-    width: 50vw;
+    width: 40vw;
     height: 0 auto;
     align-items: center;
     margin: 20px auto;
     padding: 20px 20px;
     border-radius: 10px;
-    font-size: 30px;
+    font-size: 25px;
 }
 
 #finish {
@@ -95,7 +98,7 @@ body {
     font-size: 30px;
 }
 
-.play-again {
+#play-again {
     color: white;
     background-color: rgb(101, 48, 133);
     font-size: 30px;

@@ -52,7 +52,7 @@ const gameQuestions = [
         answer: [
             { option: "1015", correct: true },
             { option: "983", correct: false },
-            { option: "Animal Crossing: New Horizons", correct: false },
+            { option: "1369", correct: false },
         ],
     },
     {
@@ -136,11 +136,10 @@ function finishGame() {
     start.style.display = "none";
     quiz.style.display = "none";
     finish.style.display = "block";
-    result.textContent = "GAME OVER!<\n>Congrats!\nYou've got " + score + " questions right!";
+    result.textContent = score;
     playAgainButton.addEventListener("click", () => {
         gameStart();
 
     });
 }
-
 
