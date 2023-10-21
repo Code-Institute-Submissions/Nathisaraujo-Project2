@@ -32,7 +32,7 @@ body {
 
 .answer {
     width: 25vw;
-    height: 0 auto;
+    height: auto;
     margin-bottom: 10px;
     border-radius: 10px;
     background-color: rgba(199, 206, 219);
@@ -55,7 +55,7 @@ body {
     display: flex;
     flex-direction: column;
     width: 60vw;
-    height: 0 auto;
+    height: auto;
     align-items: center;
     margin: 0 auto;
     border-radius: 10px;
@@ -79,7 +79,7 @@ body {
 .instructions {
     background-color: rgba(209, 183, 221, 0.555);
     width: 40vw;
-    height: 0 auto;
+    height: auto;
     align-items: center;
     margin: 20px auto;
     padding: 20px 20px;
@@ -90,7 +90,7 @@ body {
 #finish {
     background-color: rgba(209, 183, 221, 0.555);
     width: 50vw;
-    height: 0 auto;
+    height: auto;
     align-items: center;
     margin: 20px auto;
     padding: 20px 20px;
